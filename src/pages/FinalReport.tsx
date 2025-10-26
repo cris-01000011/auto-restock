@@ -34,7 +34,7 @@ export default function FinalReport() {
   }
 
   return (
-    <div className="bg-[#2E6D92] p-6 w-full max-h-screen text-white scrollbar-thumb-[#205777] scrollbar-thumb-rounded-full scrollbar-track-[#5695A4] scrollbar-thin overflow-y-scroll">
+    <div className="bg-[#2E6D92] p-6 w-full h-screen text-white scrollbar-thumb-[#205777] scrollbar-thumb-rounded-full scrollbar-track-[#5695A4] scrollbar-thin overflow-y-scroll">
       <h1 className="text-2xl font-semibold mb-4 text-center">
         Reporte Final de Faltantes
       </h1>
