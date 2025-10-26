@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# 🧾 Auto Restock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite application that automates the process of detecting missing products based on customer orders and the current inventory.  
+The app reads two Excel files, compares them, and generates detailed reports showing which products need to be restocked.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Setup
 
-## React Compiler
+### 1️⃣ Clone the repository
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/cris-01000011/auto-restock.git
+cd auto-restock
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3️⃣ Run the development server
+
+```bash
+npm run dev
+```
+---
+
+## How to use
+
+### 📂 Upload the Excel Files
+
+Upload the following files from the `/assets` folder:
+
+- [`customer_orders.xlsx`](https://github.com/cris-01000011/auto-restock/blob/main/assets/customer_orders.xlsx)
+- [`inventory.xlsx`](https://github.com/cris-01000011/auto-restock/blob/main/assets/inventory.xlsx)
+
+---
+
+### ⚙️ Automatic Report Generation
+
+Once both files are uploaded, the system will automatically process the data and generate a report with the products **missing in stock**.
+
+The report will be **automatically downloaded** as an Excel file.
+
+---
+
+### 📦 Merchandise Reception
+
+After the first report, you will be redirected to **`/merchandise-reception`**.
+
+In this section, select the products you want to **restock**.
+
+---
+
+### 📊 Final Report
+
+When finished, you can generate a **final report** that includes:
+
+- The customer orders  
+- The missing products  
+- The restock quantities  
+
+You can then **download this final report** as an Excel file.
