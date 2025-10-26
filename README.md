@@ -5,36 +5,15 @@ The app reads two Excel files, compares them, and generates detailed reports sho
 
 ---
 
-## ⚙️ Setup
-
-### 1️⃣ Clone the repository
-
-```bash
-git clone https://github.com/cris-01000011/auto-restock.git
-cd auto-restock
-```
-
-### 2️⃣ Install dependencies
-
-```bash
-npm install
-```
-
-### 3️⃣ Run the development server
-
-```bash
-npm run dev
-```
----
-
 ## How to use
 
 ### 📂 Upload the Excel Files
 
-Upload the following files from the `/assets` folder:
+Upload the following files
+(you can download this files in the first page of the project):
 
-- [`customer_orders.xlsx`](https://github.com/cris-01000011/auto-restock/blob/main/assets/customer_orders.xlsx)
-- [`inventory.xlsx`](https://github.com/cris-01000011/auto-restock/blob/main/assets/inventory.xlsx)
+- customer_orders.xlsx
+- inventory.xlsx
 
 ---
 
@@ -63,3 +42,26 @@ When finished, you can generate a **final report** that includes:
 - The restock quantities  
 
 You can then **download this final report** as an Excel file.
+
+---
+
+## ⚙️ Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/cris-01000011/auto-restock.git
+cd auto-restock
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
+
+```bash
+npm run dev
+```
