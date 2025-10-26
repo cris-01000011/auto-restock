@@ -121,7 +121,7 @@ function App() {
 
   return (
     <main className="bg-[#2E6D92] w-full h-screen text-white flex flex-col items-center justify-center">
-      <form className='bg-[#205777] p-3 rounded-xl'>
+      <form className='bg-[#205777] p-3 rounded-xl mb-2'>
         <h1 className='text-center font-bold mb-3'>Subir Archivos</h1>
 
         <label htmlFor="customer_orders" className="bg-[#77AFB5] block mb-2 px-2 rounded py-1">
@@ -150,6 +150,17 @@ function App() {
           onChange={readUploadFile}
         />
       </form>
+
+      <div className="flex flex-row gap-2">
+        <a href="/customer_orders.xlsx" download className="bg-[#77AFB5] block mb-2 px-2 rounded py-1">
+          <i className='bi bi-download mr-2'></i>
+          customer_orders.xlsx
+        </a>
+        <a href="/inventory.xlsx" download className="bg-[#77AFB5] block mb-2 px-2 rounded py-1">
+          <i className='bi bi-download mr-2'></i>
+          inventory.xlsx
+        </a>
+      </div>
     </main>
   );
 }
