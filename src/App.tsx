@@ -161,6 +161,11 @@ function App() {
           inventory.xlsx
         </a>
       </div>
+
+      <a href="/Fase 1. Prueba práctica.xlsx" download className="fixed bottom-2 right-5 bg-[#77AFB5] mb-2 px-2 rounded py-1">
+        <i className='bi bi-download mr-2'></i>
+        Fase 1. Prueba práctica.xlsx
+      </a>
     </main>
   );
 }
